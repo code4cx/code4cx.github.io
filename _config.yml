@@ -1,1 +1,11 @@
+# basic options
+title: CodeCx Blog
+author: codecx_team
+email: code4cx@gmail.com
+description: A place to learn Machine Learning
+twitter_username: code4cx
+github_username:  code4cx
+
+# Build settings
+markdown: kramdown
 theme: jekyll-theme-architect
