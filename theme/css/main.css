@@ -10,6 +10,7 @@
 /* Imports */
 @import url("reset.css");
 @import url("pygment.css");
+@import url("typogrify.css");
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
 
 /***** Global *****/
@@ -167,7 +168,7 @@ img {
 		color: #fff;
 		width:50%;
 		float:left;
-		max-width: 300px;
+		max-width: 900px;
     }
     #side {
     	color: #fff;
