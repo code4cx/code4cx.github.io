@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Machine Learning Blog</title><link href="code4cx.github.io/" rel="alternate"></link><link href="code4cx.github.io/feeds/all.atom.xml" rel="self"></link><id>code4cx.github.io/</id><updated>2017-08-20T00:00:00+05:30</updated><entry><title>A sample post</title><link href="code4cx.github.io/a-sample-post.html" rel="alternate"></link><published>2017-08-20T00:00:00+05:30</published><updated>2017-08-20T00:00:00+05:30</updated><author><name>Aditya Arora</name></author><id>tag:None,2017-08-20:code4cx.github.io/a-sample-post.html</id><summary type="html">&lt;p&gt;Hello&lt;/p&gt;
-&lt;p&gt;If you are seeing this, it means that you are either Hodor, Felllix, PKJ or Teaboi.
-You are the author of the blog and remeber to use this as a format for the blog. &lt;/p&gt;
-&lt;p&gt;Remember to update slug.&lt;/p&gt;
-&lt;p&gt;Thanks&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello&lt;/p&gt;
-&lt;p&gt;If you are seeing this, it means that you are either Hodor, Felllix, PKJ or Teaboi.
-You are the author of the blog and remeber to use this as a format for the blog. &lt;/p&gt;
-&lt;p&gt;Remember to update slug.&lt;/p&gt;
-&lt;p&gt;Thanks&lt;/p&gt;</content></entry><entry><title>Floydhub Documentation</title><link href="code4cx.github.io/floydhub-documentation.html" rel="alternate"></link><published>2017-08-20T00:00:00+05:30</published><updated>2017-08-20T00:00:00+05:30</updated><author><name>Aditya Arora</name></author><id>tag:None,2017-08-20:code4cx.github.io/floydhub-documentation.html</id><summary type="html">&lt;h1&gt;Floyd Documentation&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Machine Learning Blog - docs</title><link href="code4cx.github.io/" rel="alternate"></link><link href="code4cx.github.io/feeds/docs.atom.xml" rel="self"></link><id>code4cx.github.io/</id><updated>2017-08-20T00:00:00+05:30</updated><entry><title>Floydhub Documentation</title><link href="code4cx.github.io/floydhub-documentation.html" rel="alternate"></link><published>2017-08-20T00:00:00+05:30</published><updated>2017-08-20T00:00:00+05:30</updated><author><name>Aditya Arora</name></author><id>tag:None,2017-08-20:code4cx.github.io/floydhub-documentation.html</id><summary type="html">&lt;h1&gt;Floyd Documentation&lt;/h1&gt;
 &lt;p&gt;Floyd is a great cloud computing platform.&lt;/p&gt;
 &lt;h2&gt;Python Machine Learning Setting up floyd&lt;/h2&gt;
 &lt;p&gt;Setting up floyd for using on Windows&lt;/p&gt;
