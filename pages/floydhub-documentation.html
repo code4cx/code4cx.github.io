@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Floydhub Documentation</title>
+        <link rel="stylesheet" href="code4cx.github.io/theme/css/main.css" />
+        <link href="code4cx.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The Machine Learning Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="code4cx.github.io/">The Machine Learning Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="code4cx.github.io/pages/floydhub-documentation.html">Floydhub Documentation</a></li>
+                    <li><a href="code4cx.github.io/pages/a-sample-post.html">A sample post</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Floydhub Documentation</h1>
+    
+    <h1>Floyd Documentation</h1>
+<p>Floyd is a great cloud computing platform.</p>
+<h2>Python Machine Learning Setting up floyd</h2>
+<p>Setting up floyd for using on Windows</p>
+<h2>Installation</h2>
+<div class="highlight"><pre><span></span>$ pip install -U floyd-cli
+</pre></div>
+
+
+<h2>Login</h2>
+<div class="highlight"><pre><span></span>$ floyd login
+</pre></div>
+
+
+<p>Copy and paste your authentication token in your terminal</p>
+<h2>Run project</h2>
+<p><strong>Make a project folder</strong></p>
+<div class="highlight"><pre><span></span>$ mkdir myproject
+</pre></div>
+
+
+<p><strong>Change to project folder</strong></p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> myproject
+</pre></div>
+
+
+<p><strong>Make a folder for data</strong></p>
+<div class="highlight"><pre><span></span>$ mkdir mydata
+</pre></div>
+
+
+<p><strong>Make a folder for code</strong></p>
+<div class="highlight"><pre><span></span>$ mkdir mycode
+</pre></div>
+
+
+<p>Paste all your data in <code>mydata</code></p>
+<p>Paste all your code in <code>mycode</code></p>
+<p><strong>Change to data directory</strong></p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> mydata
+</pre></div>
+
+
+<h1>Initialise data</h1>
+<div class="highlight"><pre><span></span>$ floyd data init sent-data
+</pre></div>
+
+
+<p>Then you can upload your dataset to Floyd.</p>
+<div class="highlight"><pre><span></span>$ floyd data upload
+</pre></div>
+
+
+<p>Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed, using this data id.</p>
+<p><strong>Output</strong></p>
+<div class="highlight"><pre><span></span>Creating data source. Uploading files ...
+DATA ID                 NAME                    VERSION
+----------------------  --------------------  ---------
+GY3QRFFUA8KpbnqvroTPPW  alice/sent-data:1            1
+</pre></div>
+
+
+<p><strong>Change to main directory</strong></p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
+</pre></div>
+
+
+<p><strong>Change to code directory</strong></p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> mycode
+</pre></div>
+
+
+<p><strong>Run the code</strong></p>
+<div class="highlight"><pre><span></span>$ floyd run --data &lt;DATA_KEY&gt;:&lt;MOUNT&gt; --env theano-0.9:py2 <span class="s2">&quot;python filename.py&quot;</span>
+</pre></div>
+
+
+<p><strong>Example code</strong></p>
+<div class="highlight"><pre><span></span>$ floyd run --data GY3QRFFUA8KpbnqvroTPPW:mydata --env theano-0.9:py2 <span class="s2">&quot;python mlp.py&quot;</span>
+</pre></div>
+
+
+<p><strong>Check the status of code</strong></p>
+<div class="highlight"><pre><span></span>$ floyd logs &lt;RUN_ID&gt;
+</pre></div>
+
+
+<h1>Some common problems:</h1>
+<ul>
+<li>Should I put my code and data in separate folders</li>
+</ul>
+<p>NOTE: Adding the codes in a separate folder prevents re-loading of data in the memory of floyd server.
+Floyd server synchronizes the WHOLE FOLDER in which the code is located when you run the code using the above command, which is actually a waste of (upload) time and a problem of data redundancy as you have already uploaded the data on the server.</p>
+<ul>
+<li>How to link data in my script</li>
+</ul>
+<div class="highlight"><pre><span></span>x_data = np.load(&#39;/nfiles/fileone.npy&#39;)
+y_data = np.load(&#39;/nfiles/filetwo.npy&#39;)
+</pre></div>
+
+
+<p>Here, nfiles is my MOUNT point.</p>
+<ul>
+<li>If you are using Anaconda prompt and you come across the following error after running the command: "pip install -U floyd-cli": scandir could not be installed</li>
+</ul>
+<div class="highlight"><pre><span></span>$ conda install -c conda-forge <span class="nv">scandir</span><span class="o">=</span><span class="m">1</span>.5
+</pre></div>
+
+
+<p><em>Contributors:</em>
+<em> Aditya Arora
+</em> Piyush Jha
+* Akshita Gupta</p>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://codecx.in/">Portfolio</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="code4cx.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
